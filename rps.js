@@ -3,8 +3,6 @@ let humanScore = 0;
 let computerScore = 0;
 let counter = 0;
 let roundScore;
-let humanScoreUpdate = 0;
-let computerScoreUpdate = 0;
 
 function getComputerChoice() {
     let number = Math.floor(Math.random()* 3) + 1;
