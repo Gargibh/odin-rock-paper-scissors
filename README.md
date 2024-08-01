@@ -13,3 +13,43 @@ PSEUDOCODE
 
 5. set counter to 5 and call playround as long as counter is  less than 5 then stop and show score and who won. 
 
+
+Before code for UI: 
+
+
+function playGame() {
+
+    if (counter<5) {
+       playRound();
+        counter++;
+        playGame();
+    }else {
+        alert("Game Over!")
+        alert(`"Your score is ${humanScore}."`);
+        if (humanScore > computerScore) {
+         alert("You won!");
+        } else {
+         alert("You lost!");
+        }
+     }
+    }
+
+human choice function
+
+function getHumanChoice() {
+    input = e.target;
+    const inputLower = input.toLowerCase();
+    
+    if (inputLower==="rock") {
+        return "rock";
+    } else if (inputLower==="paper") {
+       return "paper";
+    } else if (inputLower==="scissors"){
+       return "scissors";
+    }else {
+        alert("invalid input, try again");
+        return getHumanChoice();
+    }
+
+}   
+
